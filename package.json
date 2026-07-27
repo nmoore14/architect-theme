@@ -1,0 +1,50 @@
+{
+  "name": "architect-vscode-theme",
+  "displayName": "Architect Theme",
+  "description": "A calm, typography-first light and dark color theme for long, focused coding sessions.",
+  "version": "0.1.0",
+  "publisher": "your-publisher-name",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "color theme",
+    "light theme",
+    "dark theme",
+    "minimal",
+    "accessible",
+    "architect"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-user/architect-vscode-theme.git"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Architect Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/architect-dark-color-theme.json"
+      },
+      {
+        "label": "Architect Light",
+        "uiTheme": "vs",
+        "path": "./themes/architect-light-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "generate": "node scripts/generate-themes.mjs",
+    "validate": "node scripts/validate.mjs",
+    "prepackage": "npm run generate && npm run validate",
+    "package": "vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.6.0"
+  }
+}

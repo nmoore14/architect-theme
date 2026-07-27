@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Architect fixture</title>
+    <script type="module">
+      class CounterElement extends HTMLElement {
+        connectedCallback() {
+          const count = Number(this.dataset.count ?? 0);
+          this.innerHTML = `<button aria-label="Increment">Count: ${count}</button>`;
+          this.querySelector("button")?.addEventListener("click", async () => {
+            await Promise.resolve();
+            console.info("incremented", { count: count + 1, active: true });
+          });
+        }
+      }
+      customElements.define("x-counter", CounterElement);
+    </script>
+  </head>
+  <body>
+    <!-- Custom elements expose tags, attributes, strings, and embedded code. -->
+    <main class="shell" data-theme="architect">
+      <h1>Quiet structure</h1>
+      <x-counter data-count="4"></x-counter>
+    </main>
+  </body>
+</html>

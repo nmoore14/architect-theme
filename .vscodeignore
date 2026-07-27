@@ -1,0 +1,8 @@
+.vscode/**
+.github/**
+scripts/**
+test/**
+screenshots/**
+*.code-workspace
+.gitignore
+package-lock.json

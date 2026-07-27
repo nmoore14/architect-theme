@@ -1,0 +1,28 @@
+---
+name: architect-ci
+enabled: true
+retries: 3
+threshold: 0.875
+optional: null
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm ci
+      - name: Validate theme
+        env:
+          THEME_MODE: dark
+        run: |
+          npm run generate
+          npm run validate

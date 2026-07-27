@@ -1,0 +1,29 @@
+@layer reset, components;
+
+:root {
+  --canvas: oklch(97% 0.01 110);
+  --accent: #4c7a91;
+  color-scheme: light dark;
+}
+
+@layer components {
+  .card[data-active="true"] {
+    display: grid;
+    grid-template-columns: minmax(12rem, 1fr) auto;
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+    padding: 1.25rem;
+    color: color-mix(in srgb, var(--accent) 70%, CanvasText);
+    background: var(--canvas);
+    border: 1px solid rgb(76 86 106 / 18%);
+    border-radius: 0.625rem;
+    transition: translate 160ms ease;
+  }
+
+  .card:is(:hover, :focus-within) {
+    translate: 0 -2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition-duration: 0.01ms !important; }
+}

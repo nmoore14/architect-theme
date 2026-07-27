@@ -1,0 +1,15 @@
+{
+  "folders": [
+    {
+      "name": "Architect Theme",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Architect Dark"
+  }
+}

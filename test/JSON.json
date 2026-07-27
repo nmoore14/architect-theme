@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "name": "architect-fixture",
+  "version": "0.1.0",
+  "private": true,
+  "enabled": true,
+  "retryCount": 3,
+  "threshold": 0.875,
+  "optionalValue": null,
+  "languages": [
+    "typescript",
+    "python",
+    "rust"
+  ],
+  "scripts": {
+    "check": "npm run validate",
+    "package": "vsce package --no-dependencies"
+  }
+}

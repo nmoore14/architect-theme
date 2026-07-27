@@ -1,89 +1,109 @@
-# Architect Theme
+<div align="center">
 
-Architect is a coordinated pair of restrained VS Code themes for long, focused coding sessions. Its warm charcoal and paper-toned canvases use surface changes, typography, and a compact syntax palette to create hierarchy without visual noise.
+# A R C H I T E C T
 
-- **Architect Dark** — warm charcoal with quiet blue-gray surfaces
-- **Architect Light** — soft daylight paper with cool stone chrome
+### A quiet place to build loud ideas.
 
-Both modes share the same semantic color roles, so switching modes preserves the visual meaning of your code.
+Two coordinated VS Code themes, drawn for long sessions and clear thinking.
 
-## Design philosophy
+`WARM CHARCOAL` · `PAPER DAYLIGHT` · `TYPOGRAPHY FIRST`
 
-Architect favors structure over spectacle:
+<br>
 
-- Ordinary variables remain close to the editor foreground.
-- Blue and cyan identify callable and type-level structure.
-- Sage is reserved for strings and successful states.
-- Violet marks language keywords without dominating the page.
-- Amber and gold identify values, constants, and attributes.
-- Coral and muted red are used sparingly for tags, conflicts, and errors.
-- Borders are quiet; elevation and small surface shifts separate regions.
+<img src="screenshots/architect-dark-02.png" alt="Architect Dark in VS Code" width="49%">
+<img src="screenshots/architect-light-03.png" alt="Architect Light in VS Code" width="49%">
 
-The palette is original, with general inspiration from calm desktop interfaces and typography-first productivity software.
+<br><br>
 
-## Screenshots
+> Structure over spectacle. Signal over decoration.<br>
+> Every color earns its place.
 
-Add marketplace screenshots at:
+</div>
 
-- `screenshots/architect-dark.png`
-- `screenshots/architect-light.png`
+---
 
-Suggested captures should show TypeScript and Markdown with the Explorer, integrated terminal, suggestions, and Git decorations visible.
+## The idea
 
-## Installation for local development
+I built Architect around a simple belief: the editor should disappear just enough for the work to come forward.
 
-Requirements: [Visual Studio Code](https://code.visualstudio.com/) and Node.js 20 or newer.
+It is not neon, nostalgic, or aggressively minimal. It is measured. Warm charcoal and paper-toned canvases establish the room; small changes in surface, type, and color create the hierarchy. Dark and light share the same semantic blueprint, so switching modes changes the atmosphere—not the meaning of your code.
 
-```sh
-git clone https://github.com/your-user/architect-vscode-theme.git
-cd architect-vscode-theme
-npm install
-code architect-theme.code-workspace
-```
+| 01 / FOUNDATION | 02 / STRUCTURE | 03 / DETAIL |
+| :--- | :--- | :--- |
+| Low-glare canvases made for staying awhile | Consistent semantic roles in both modes | Quiet borders and deliberate surface shifts |
 
-The `your-user` and `your-publisher-name` values are intentional placeholders. Replace them before publishing.
+## Two elevations, one blueprint
 
-## Test in the Extension Development Host
+| Architect Dark | Architect Light |
+| :---: | :---: |
+| Warm charcoal with quiet blue-gray surfaces | Soft daylight paper with cool stone chrome |
+| ![Architect Dark editor view](screenshots/architect-dark-01.png) | ![Architect Light editor view](screenshots/architect-light-02.png) |
 
-1. Open this folder or `architect-theme.code-workspace` in VS Code.
-2. Press `F5` and choose **Launch Architect Theme** if prompted.
-3. In the new Extension Development Host window, open the Command Palette.
-4. Run **Preferences: Color Theme**.
-5. Select **Architect Dark** or **Architect Light**.
-6. Open files in `test/` to inspect syntax coverage.
+## Working drawings
 
-Theme JSON changes are reflected in the development host after running `npm run generate`; use **Developer: Reload Window** if needed.
+These are not staged color swatches. Architect is shown doing the job: navigating a project, reading dense code, opening suggestions, and moving between languages.
 
-You can also launch directly:
+### Night shift
 
-```sh
-code --extensionDevelopmentPath="$PWD" test/TypeScript.ts
-```
+<table>
+  <tr>
+    <td width="50%"><img src="screenshots/architect-dark-02.png" alt="Architect Dark with code completion"></td>
+    <td width="50%"><img src="screenshots/architect-dark-03.png" alt="Architect Dark syntax view"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Completion without the spotlight</sub></td>
+    <td align="center"><sub>Syntax with a measured pulse</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="screenshots/architect-dark-04.png" alt="Architect Dark language fixture"></td>
+    <td width="50%"><img src="screenshots/architect-dark-05.png" alt="Architect Dark compact code view"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Hierarchy across a full file</sub></td>
+    <td align="center"><sub>Calm, even at its most compact</sub></td>
+  </tr>
+</table>
 
-## Select the theme
+### Day shift
 
-Open the color theme picker with `Ctrl+K Ctrl+T` on Windows/Linux or `Cmd+K Cmd+T` on macOS, then choose **Architect Dark** or **Architect Light**.
+<table>
+  <tr>
+    <td width="50%"><img src="screenshots/architect-light-01.png" alt="Architect Light full editor view"></td>
+    <td width="50%"><img src="screenshots/architect-light-03.png" alt="Architect Light syntax view"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Paper, not pure white</sub></td>
+    <td align="center"><sub>Cool structure in daylight</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="screenshots/architect-light-04.png" alt="Architect Light language fixture"></td>
+    <td width="50%"><img src="screenshots/architect-light-05.png" alt="Architect Light detailed code view"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Semantic roles stay familiar</sub></td>
+    <td align="center"><sub>Detail without visual noise</sub></td>
+  </tr>
+</table>
 
-## Packaging
+<details>
+<summary><strong>Open the material study</strong> — palette and token inspection</summary>
+<br>
+<img src="screenshots/architect-light-06.png" alt="Architect Light palette and token study">
+</details>
 
-Generate, validate, and build a local VSIX:
+## Color has a job
 
-```sh
-npm install
-npm run package
-```
+Ordinary variables stay close to the editor foreground. Color is reserved for information:
 
-The package script uses `vsce` and does not publish anything. To install the resulting archive:
+- **Blue / cyan** identifies callable and type-level structure.
+- **Sage** belongs to strings and successful states.
+- **Violet** marks language keywords without taking over the page.
+- **Amber / gold** identifies values, constants, and attributes.
+- **Coral / muted red** is used sparingly for tags, conflicts, and errors.
 
-```sh
-code --install-extension architect-vscode-theme-0.1.0.vsix
-```
-
-## Supported languages
-
-Architect includes broad TextMate and semantic-token coverage for TypeScript, JavaScript, Python, Go, Rust, HTML, XML, CSS, JSON, Markdown, YAML, shell scripts, diff views, and common configuration formats. Languages supplied by extensions inherit the semantic roles and common TextMate scopes.
-
-## Palette
+<details>
+<summary><strong>View the complete palette specification</strong></summary>
+<br>
 
 | Role | Architect Dark | Architect Light |
 | --- | --- | --- |
@@ -94,17 +114,35 @@ Architect includes broad TextMate and semantic-token coverage for TypeScript, Ja
 | Secondary text | `#A7B0BF` | `#4C566A` |
 | Comments | `#899696` | `#68746D` |
 | Selection | `#344256` | `#CDD8E3` |
-| Accent/cursor | `#88C0D0` | `#4C7A91` |
+| Accent / cursor | `#88C0D0` | `#4C7A91` |
 | Keywords | `#B48EAD` | `#76558F` |
 | Functions | `#81A1C1` | `#3E6F91` |
 | Types | `#88C0D0` | `#357A83` |
 | Strings | `#A3BE8C` | `#547A50` |
 | Numbers | `#D9B26F` | `#9A6B2F` |
-| Tags/errors | `#D08770` / `#BF6B73` | `#9C5E4D` / `#A24E57` |
+| Tags / errors | `#D08770` / `#BF6B73` | `#9C5E4D` / `#A24E57` |
 
-## Recommended editor settings
+</details>
 
-These settings are optional but showcase the intended bracket and semantic styling:
+## Move in
+
+### Try it locally
+
+Requirements: [Visual Studio Code](https://code.visualstudio.com/) and Node.js 20 or newer.
+
+```sh
+git clone https://github.com/your-user/architect-vscode-theme.git
+cd architect-vscode-theme
+npm install
+code architect-theme.code-workspace
+```
+
+Press `F5`, choose **Launch Architect Theme**, then open the color theme picker with `Ctrl+K Ctrl+T` on Windows/Linux or `Cmd+K Cmd+T` on macOS. Select **Architect Dark** or **Architect Light**.
+
+> [!NOTE]
+> The `your-user` and `your-publisher-name` values are intentional placeholders. Replace them before publishing.
+
+### Recommended settings
 
 ```jsonc
 {
@@ -116,9 +154,33 @@ These settings are optional but showcase the intended bracket and semantic styli
 }
 ```
 
-## Workbench customization
+## Language coverage
 
-Use theme-specific settings to preserve the paired design:
+Architect includes broad TextMate and semantic-token coverage for:
+
+`TypeScript` · `JavaScript` · `Python` · `Go` · `Rust` · `HTML` · `XML` · `CSS` · `JSON` · `Markdown` · `YAML` · `Shell` · `Diff`
+
+Languages supplied by extensions inherit the semantic roles and common TextMate scopes.
+
+## The workshop
+
+Theme sources are generated from the centralized role palette in `scripts/generate-themes.mjs`. Generated JSON in `themes/` is checked into source control, keeping the extension fully declarative at runtime.
+
+```sh
+npm run generate    # rebuild both themes from the shared palette
+npm run validate    # check structure, coverage, colors, and contrast
+npm run package     # create a local VSIX without publishing
+```
+
+Install the resulting archive with:
+
+```sh
+code --install-extension architect-vscode-theme-0.1.0.vsix
+```
+
+<details>
+<summary><strong>Theme-specific workbench customization</strong></summary>
+<br>
 
 ```jsonc
 {
@@ -135,9 +197,11 @@ Use theme-specific settings to preserve the paired design:
 }
 ```
 
-## Token customization
+</details>
 
-TextMate token rules can be adjusted without editing the extension:
+<details>
+<summary><strong>TextMate token customization</strong></summary>
+<br>
 
 ```jsonc
 {
@@ -160,29 +224,22 @@ TextMate token rules can be adjusted without editing the extension:
 }
 ```
 
-## Development and validation
+</details>
 
-Theme sources are generated from the centralized role palette in `scripts/generate-themes.mjs`; the generated JSON in `themes/` is checked into source control so the extension remains fully declarative at runtime.
+## Fine print
 
-```sh
-npm run generate
-npm run validate
-npm run package
-```
-
-Validation checks manifest paths, contribution labels, theme/UI type agreement, semantic highlighting, color formatting, rule coverage, and contrast for important editor and workbench pairs.
-
-## Known limitations
-
-- Syntax precision ultimately depends on the grammar and semantic-token provider installed for a language.
+- Syntax precision depends on the grammar and semantic-token provider installed for a language.
 - Embedded languages can inherit scopes from their host grammar and may not match every specialized extension.
 - Terminal applications that emit their own 24-bit colors bypass the ANSI palette.
-- Screenshot assets are intentionally left as placeholders until captured in the target VS Code version and font environment.
 
-## Contributing
+Contributions are welcome. Please include a focused before/after screenshot and a small fixture for scope changes. Keep new colors tied to an existing semantic role where possible, and run `npm run validate` and `npm run package` before opening a pull request.
 
-Please include a focused before/after screenshot and a small fixture that demonstrates any proposed scope change. Keep color additions tied to an existing semantic role where possible. Run `npm run validate` and `npm run package` before opening a pull request.
+---
 
-## License
+<div align="center">
 
-[MIT](LICENSE)
+### Make the room quiet. Let the work speak.
+
+Architect is released under the [MIT License](LICENSE).
+
+</div>
